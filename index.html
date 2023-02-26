@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lista grup</title>
+  <style>
+    body {
+      background-color: #202020;
+      color: #fff;
+    }
+    a{
+      color:white;
+      
+    }
+    li{
+      margin:10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Lista grup</h1>
+  <!-- kod HTML z listą grup -->
+  <div class="sidebar">
+    <ul id="group-list"></ul>
+  </div>
+
+  <!-- kod JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      // pobranie listy grup
+      $.getJSON('https://plan.usos.tu.kielce.pl/api/groups', function (groups) {
+        // dodanie elementów listy do menu
+        var groupList = $('#group-list');
+        $.each(groups, function (index, group) {
+          var listItem = $('<li>');
+          var regex = /\[(.*?)\]/;
+          var match = regex.exec(group.name);
+          var groupID = match[1];
+          var link = $('<a>').attr('href', 'plan.html?group_id=' + group.group_id+'&nazwa=' + groupID ).text(group.name);
+          listItem.append(link);
+          groupList.append(listItem);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

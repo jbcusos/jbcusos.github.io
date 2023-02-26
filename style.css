@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #202020;
+    color: #FFF;
+}
+
+h1 {
+    margin: 10px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td {
+    color: #000;
+}
+
+td,
+th {
+    border: 1px solid #888;
+    padding: 10px;
+    width: 1px;
+}
+
+th {
+    background: #333;
+}
+
+.lab {
+    background-color: pink;
+}
+
+.wyk {
+    background-color: lightblue;
+}
+
+.cw {
+    background-color: lightgreen;
+}
+
+.pro {
+    background-color: lightyellow;
+}
+
+.room {
+    color: #f00;
+}
+
+hr {
+    border: 1px solid red;
+}
+
+.week {
+    font-weight: bold;
+}
