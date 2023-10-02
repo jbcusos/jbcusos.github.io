@@ -1,6 +1,6 @@
 $(function () {
   function isWeekEven(date) {
-    var referenceDate = new Date("2023-02-27");
+    var referenceDate = new Date("2023-10-02");
     var diff = (date.getTime() - referenceDate.getTime()) / (1000 * 60 * 60 * 24 * 7);
     var weekNumber = Math.floor(diff) + 1;
     var exceptions = [12, 13, 14, 15];
